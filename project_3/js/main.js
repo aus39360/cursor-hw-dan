@@ -51,3 +51,14 @@ function counter (letter, word) {
     return quantityLetters
 }
 console.log('скільки разів певна буква повторюється в слові:', counter('а', 'Австралия'))
+
+
+//7.Створіть функцію, яка конвертує долари в гривні та навпаки в залежності від наявності символа $ або UAH в рядку. 
+function сurrencyConverter(currency) {
+
+    for ( let i = 0; i < currency.length; i++ ) {
+        if ('$' == currency[i]) return parseFloat(currency) * 28
+        if ('U' == currency[i]) return parseFloat(currency) * 0.036 
+    }
+}
+console.log('конвертер:', сurrencyConverter('1$'))
